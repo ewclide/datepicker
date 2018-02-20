@@ -1,0 +1,134 @@
+.datepicker {
+    width: 350px;
+    font-family: Roboto;
+}
+.datepicker .button {
+    border: none;
+    background: white;
+    font-size: 15px;
+    border: 1px solid #b2b2b2;
+    padding: 0 10px;
+    height: 36px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 2px;
+    text-align: left;
+    transition: 0.25s;
+}
+.datepicker .button.active {
+    border: 1px solid #212121;
+}
+.datepicker .label:after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0;
+    right: 0px;
+    height: 0px;
+    width: 0;
+    margin: auto;
+    border-right: 3px solid transparent;
+    border-left: 3px solid transparent;
+    border-top: 5px solid black;
+}
+.datepicker .label {
+    width: 25px;
+}
+.datepicker .label.active {
+    transform: rotate(180deg);
+}
+.datepicker .wrapper {
+    max-width: 350px;
+    margin-top: 5px;
+    padding: 10px 8px;
+    background: hsla(0, 0%, 97%, 1);
+    border: 1px solid #c5c5c5;
+    box-shadow: inset 0px 0px 2px white, 0px 4px 5px rgba(0,0,0,0.08);
+    border-radius: 2px;
+}
+.datepicker .wrapper select {
+    padding: 5px 10px;
+    border: 1px solid #bdbdbd;
+    font-size: 14px;
+}
+.datepicker .calendar {
+    margin: 10px 0;
+    font-size: 14px;
+    padding: 5px;
+    border: 1px dashed #cfd1d4;
+    background: white;
+}
+.datepicker .calendar .days-header {
+    background: #50b5ad;
+    border-left: 3px solid #388c85;
+    border-right: 3px solid #388c85;
+    color: white;
+    margin-bottom: 3px;
+}
+.datepicker .calendar .days-header div {
+    padding: 5px 0px;
+    font-size: 12px;
+}
+.datepicker .calendar .days-table div {
+    background: #f2f2f3;
+    outline: 1px solid white;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: 400;
+    transition: 0.25s;
+}
+.datepicker .calendar .days-table div:hover {
+    background: #dbdee0;
+}
+.datepicker .calendar .days-table div.selected:hover {
+    background: #c8e2c4;
+}
+.datepicker .calendar .days-table .edge:hover {
+    background: #c8e2c4;
+}
+.datepicker .calendar .days-table .today {
+    outline: 1px solid #212121;
+    position: relative;
+    z-index: 1;
+}
+.datepicker .calendar .days-table .selected {
+    background: #e1eddf;
+    color: #42643f;
+}
+.datepicker .calendar .days-table .edge {
+    outline: 1px solid #7eb077;
+    position: relative;
+    background: #e9efe9;
+}
+.datepicker .wrapper .clear {
+    background: linear-gradient(to top, #eaeaea, #dadada);
+    border: 1px solid #afafaf;
+    box-shadow: inset 0px 1px 0px rgba(255,255,255,0.8), 0px 3px 2px rgba(0,0,0,0.08);
+    height: 32px;
+    border-radius: 3px;
+    color: #272727;
+    font-size: 13px;
+    padding: 0 15px;
+}
+.datepicker .wrapper .apply {
+    background: linear-gradient(to top, #319453, #44af67);
+    border: 1px solid #21693a;
+    box-shadow: inset 0px 1px 0px rgba(255,255,255,0.5), 0px 3px 2px rgba(0,0,0,0.2);
+    text-shadow: -1px -1px 0px #2b8649;
+    height: 32px;
+    border-radius: 3px;
+    color: white;
+    font-size: 13px;
+    padding: 0 15px;
+}
+.datepicker .wrapper button {
+    border: none;
+    margin-left: 10px;
+    padding: 0 15px;
+    height: 30px;
+    border-radius: 2px;
+    font-size: 14px;
+    font-weight: 300;
+    cursor: pointer;
+}

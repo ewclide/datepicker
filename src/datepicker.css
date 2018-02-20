@@ -1,0 +1,50 @@
+.datepicker *:focus {
+    outline: none;
+}
+.datepicker * {
+    box-sizing: border-box;
+}
+.datepicker .wrapper {
+    max-width: 400px;
+    background: white;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.datepicker .wrapper select {
+    width: 48%;
+}
+.datepicker .button-wrapper {
+    position: relative;
+}
+.datepicker .label {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.datepicker .calendar .days-table div,
+.datepicker .calendar .days-header div
+{
+    width: 14.25%;
+    display: inline-block;
+    text-align: center;
+}
+.datepicker  .calendar {
+    width: 100%;
+}
+.datepicker .wrapper .buttons {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+.datepicker .calendar .days-table .empty {
+    background: none;
+    border: none;
+    cursor: auto;
+}
+.datepicker .calendar .days-table div {
+    cursor: pointer;
+}
