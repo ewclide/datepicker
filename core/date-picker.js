@@ -114,8 +114,6 @@ export class DatePicker
 
 	clear()
 	{
-		this.$elements.button.text(this.settings.textButton);
-
 		this.state.from = null;
 		this.state.to = null;
 
@@ -126,22 +124,32 @@ export class DatePicker
 
 	apply(from, to, call)
 	{
+		var ev;
+
 		if (from && to)
 		{
 			var fromText = this._getTextFromDate(from),
-			toText = this._getTextFromDate(to);
+				toText = this._getTextFromDate(to);
 
 			this.$elements.button.text(fromText + " - " + toText);
-			this.close();
+
+			ev = {
+				from : this._parseDate(from),
+				to : this._parseDate(to),
+				fromText : fromText,
+				toText : toText
+			}
+		}
+		else
+		{
+			this.$elements.button.text(this.settings.textButton);
+			ev = {};
 		}
 
 		if (call && this.settings.onApply)
-			this.settings.onApply({
-				from  : this._parseDate(from),
-				to    : this._parseDate(to),
-				fromText : fromText,
-				toText   : toText
-			});
+			this.settings.onApply(ev);
+
+		this.close();
 	}
 
 	choose(year, month)
