@@ -1,4 +1,4 @@
-#Date picker
+# Date picker
 -------------
 ### Options
 - **className** - add user class attribute
@@ -49,5 +49,5 @@ js version:
 ![result on page](/img/result.jpg)
 
 -------------
-Thank's for using.
-Developed by Ustinov Maxim - [ewclide](http://vk.com/ewclide)
+Thank's for using.  
+Developed by **Ustinov Maxim** - [ewclide](http://vk.com/ewclide)
